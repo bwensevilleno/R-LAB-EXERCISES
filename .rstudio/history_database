@@ -1,0 +1,260 @@
+1791997441921:# TODO: Create a numeric vector called scores containing: 88, 92, 79, 95, 84
+1791997441930:# Then create a character vector called subjects containing:
+1791997441931:# "Math", "Science", "English", "History", "PE"
+1791997441932:# Create a numeric vector called scores
+1791997441933:scores <- c(88, 92, 79, 95, 84)
+1791997441971:# Create a character vector called subjects
+1791997441973:subjects <- c("Math", "Science", "English", "History", "PE")
+1791997570456:# TODO: Use seq() to create a vector called odds containing odd numbers
+1791997570458:# from 1 to 19 (hint: use the "by" argument)
+1791997570459:# TODO: Use seq() with length.out to create a vector of exactly 5 evenly
+1791997570460:# spaced numbers between 0 and 1
+1791997570461:# TODO: Use seq() to create a vector called odds containing odd numbers
+1791997570462:# from 1 to 19 (hint: use the "by" argument)
+1791997570463:odds <- seq(from = 1, to = 19, by = 2)
+1791997570466:# TODO: Use seq() with length.out to create a vector of exactly 5 evenly
+1791997570467:# spaced numbers between 0 and 1
+1791997570468:evenly_spaced <- seq(from = 0, to = 1, length.out = 5)
+1791997662987:# TODO: Use rep() to create a vector that repeats the value "A" 4 times
+1791997662988:# TODO: Use rep() with the "each" argument to turn c("A", "B") into
+1791997662989:# "A" "A" "B" "B" (each element repeated twice, in order)
+1791997662990:# TODO: Use rep() with the "times" argument to turn c("A", "B") into
+1791997662991:# "A" "B" "A" "B" (the whole sequence repeated twice)
+1791997662992:rep("A", 4)
+1791997887651:# TODO: Use rep() to create a vector that repeats the value "A" 4 times
+1791997887653:# TODO: Use rep() with the "each" argument to turn c("A", "B") into
+1791997887653:# "A" "A" "B" "B" (each element repeated twice, in order)
+1791997887655:# TODO: Use rep() with the "times" argument to turn c("A", "B") into
+1791997887656:# "A" "B" "A" "B" (the whole sequence repeated twice)
+1791997887657:rep("A", 4)
+1791997887658:rep(c("A", "B"), each = 2)
+1791997887660:rep(c("A", "B"), times = 2)
+1791999747475:grades <- c(88, 92, 79, 95, 84)
+1791999747479:names(grades) <- c("Math", "Science", "English", "History", "PE")
+1791999747482:# TODO: Access the 3rd element of grades using positional indexing
+1791999747483:# TODO: Access the 1st abd 4th element of grades using positional indexing
+1791999747484:# TODO: Access "Science" and "PE" together using their names
+1791999747485:grades[3]
+1791999772690:grades <- c(88, 92, 79, 95, 84)
+1791999772693:names(grades) <- c("Math", "Science", "English", "History", "PE")
+1791999772697:# TODO: Access the 3rd element of grades using positional indexing
+1791999772698:# TODO: Access the 1st abd 4th element of grades using positional indexing
+1791999772699:# TODO: Access "Science" and "PE" together using their names
+1791999772700:grades[3]
+1791999772701:grades[c(1, 4)]
+1791999803595:grades <- c(88, 92, 79, 95, 84)
+1791999803598:names(grades) <- c("Math", "Science", "English", "History", "PE")
+1791999803601:# TODO: Access the 3rd element of grades using positional indexing
+1791999803603:# TODO: Access the 1st abd 4th element of grades using positional indexing
+1791999803604:# TODO: Access "Science" and "PE" together using their names
+1791999803605:grades[3]
+1791999803606:grades[c(1, 4)]
+1791999803608:grades[c("Science", "PE")]
+1791999999884:# TODO: Return all elements of grades EXCEPT the 1st and 4th, using
+1791999999885:# negative indexing, e.g. grades[-c(...)]
+1791999999886:grades[-c(1, 4)]
+1792000059634:# TODO: Use a logical condition to return only the grades that are
+1792000059635:# greater than or equal to 85 (hint: grades[grades >= 85])
+1792000059636:grades[grades >= 85]
+1792000919672:x <- c(1, 2, 3, 4)
+1792000919676:y <- c(10, 20, 30, 40)
+1792000919680:# TODO: Add x and y element-wise, and print the result
+1792000919681:# TODO: Multiply every element of x by 2
+1792000919682:x + y
+1792000919683:# [1] 11 22 33 44
+1792000945745:x <- c(1, 2, 3, 4)
+1792000945749:y <- c(10, 20, 30, 40)
+1792000945753:# TODO: Add x and y element-wise, and print the result
+1792000945755:# TODO: Multiply every element of x by 2
+1792000945756:x + y
+1792000945757:# [1] 11 22 33 44
+1792000945758:x * 2
+1792000945759:# [1] 2 4 6 8
+1792001037990:z <- c(1, 2, 3, 4, 5, 6)
+1792001037995:short <- c(1, 0)
+1792001038000:# TODO: Add z and short together and print the result. Run this even
+1792001038001:# though the vectors are different lengths -- observe what R does.
+1792001038002:z + short
+1792001038004:# 2 2 4 4 6 6
+1792001152605:fruits <- c("apple", "banana", "cherry")
+1792001152609:# TODO: Use append() to add "date" to the end of fruits
+1792001152610:# TODO: Use append() with the "after" argument to insert "kiwi" between
+1792001152611:# "apple" and "banana" (i.e., after position 1)
+1792001152612:append(fruits, "date")
+1792001152613:# "apple"  "banana" "cherry" "date"
+1792001200269:fruits <- c("apple", "banana", "cherry")
+1792001200271:# TODO: Use append() to add "date" to the end of fruits
+1792001200273:# TODO: Use append() with the "after" argument to insert "kiwi" between
+1792001200274:# "apple" and "banana" (i.e., after position 1)
+1792001200274:append(fruits, "date")
+1792001200276:# "apple"  "banana" "cherry" "date"
+1792001200277:append(fruits, "kiwi", after = 1)
+1792001200278:# "apple"  "kiwi"   "banana" "cherry"
+1792001622153:# TODO: Create a list called student with these named elements:
+1792001622154:# name = "Maria Santos", age = 20, grades = c(88, 92, 79),
+1792001622155:# is_enrolled = TRUE
+1792001622156:student <- list(
+1792001622157:name = "Maria Santos",
+1792001622158:age = 20,
+1792001622158:grades = c(88, 92, 79),
+1792001622159:is_enrolled = TRUE
+1792001622160:)
+1792001725971:# TODO: Access the "grades" element of student using single brackets
+1792001725972:# student["grades"] -- then check its type with class()
+1792001725973:# Access using single brackets
+1792001725974:sub_list <- student["grades"]
+1792001725977:# Check its type
+1792001725978:class(sub_list)
+1792001725979:# "list"
+1792001786382:# TODO: Access the "grades" element of student using double brackets
+1792001786384:# student[["grades"]] -- then check its type with class()
+1792001786385:# Access using double brackets
+1792001786386:raw_grades <- student[["grades"]]
+1792001786389:# Check its type
+1792001786390:class(raw_grades)
+1792001786391:# "numeric"
+1792001836824:# TODO: Access the "name" element of student using the $ operator
+1792001836825:# student$name
+1792001836826:student$name
+1792001836827:# [1] "Maria Santos"
+1792001883879:# TODO: From student, extract just the SECOND grade in the grades vector
+1792001883881:# in a single expression, e.g. student[["grades"]][2] or student$grades[2]
+1792001883882:student$grades[2]
+1792001883883:# 92
+1792002439900:inventory <- list(
+1792002439901:item = c("Notebook", "Pen", "Eraser"),
+1792002439902:price = c(25.50, 10.00, 5.00),
+1792002439903:in_stock = c(TRUE, TRUE, FALSE)
+1792002439904:)
+1792002439908:# TODO: Using what you learned in Parts B and D, print only the items
+1792002439909:# (from inventory$item) that are currently in stock (in_stock == TRUE)
+1792002439910:inventory$item[inventory$in_stock]
+1792002439911:# "Notebook" "Pen"
+1792002504191:# TODO: A new product "Ruler" priced at 15.00 and in stock (TRUE) needs
+1792002504192:# to be added to inventory. Use append() to add "Ruler" to
+1792002504193:# inventory$item, 15.00 to inventory$price, and TRUE to inventory$in_stock.
+1792002504194:# (You will need three separate append() calls, one per vector.)
+1792002504195:inventory$item <- append(inventory$item, "Ruler")
+1792002504199:inventory$price <- append(inventory$price, 15.00)
+1792002504203:inventory$in_stock <- append(inventory$in_stock, TRUE)
+1792002513960:# TODO: A new product "Ruler" priced at 15.00 and in stock (TRUE) needs
+1792002513961:# to be added to inventory. Use append() to add "Ruler" to
+1792002513962:# inventory$item, 15.00 to inventory$price, and TRUE to inventory$in_stock.
+1792002513963:# (You will need three separate append() calls, one per vector.)
+1792002513964:inventory$item <- append(inventory$item, "Ruler")
+1792002513968:inventory$price <- append(inventory$price, 15.00)
+1792002513972:inventory$in_stock <- append(inventory$in_stock, TRUE)
+1792045234980:setwd("/cloud/project/RExercise#3_SEVILLENO")
+1792045241731:getwd()
+1792045355490:cd ~
+1792045359517:ls
+1792045377540:# TODO: Create a numeric vector called scores containing: 88, 92, 79, 95, 84
+1792045377541:# Then create a character vector called subjects containing:
+1792045377542:# "Math", "Science", "English", "History", "PE"
+1792045377543:# Create a numeric vector called scores
+1792045377544:scores <- c(88, 92, 79, 95, 84)
+1792045377545:# Create a character vector called subjects
+1792045377546:subjects <- c("Math", "Science", "English", "History", "PE")
+1792045377670:# TODO: Use seq() to create a vector called odds containing odd numbers
+1792045377671:# from 1 to 19 (hint: use the "by" argument)
+1792045377672:# TODO: Use seq() with length.out to create a vector of exactly 5 evenly
+1792045377673:# spaced numbers between 0 and 1
+1792045377674:# TODO: Use seq() to create a vector called odds containing odd numbers
+1792045377675:# from 1 to 19 (hint: use the "by" argument)
+1792045377675:odds <- seq(from = 1, to = 19, by = 2)
+1792045377679:# TODO: Use seq() with length.out to create a vector of exactly 5 evenly
+1792045377680:# spaced numbers between 0 and 1
+1792045377681:evenly_spaced <- seq(from = 0, to = 1, length.out = 5)
+1792045377700:# TODO: Use rep() to create a vector that repeats the value "A" 4 times
+1792045377701:# TODO: Use rep() with the "each" argument to turn c("A", "B") into
+1792045377702:# "A" "A" "B" "B" (each element repeated twice, in order)
+1792045377703:# TODO: Use rep() with the "times" argument to turn c("A", "B") into
+1792045377704:# "A" "B" "A" "B" (the whole sequence repeated twice)
+1792045377705:rep("A", 4)
+1792045377706:rep(c("A", "B"), each = 2)
+1792045377707:rep(c("A", "B"), times = 2)
+1792045377712:grades <- c(88, 92, 79, 95, 84)
+1792045377715:names(grades) <- c("Math", "Science", "English", "History", "PE")
+1792045377717:# TODO: Access the 3rd element of grades using positional indexing
+1792045377718:# TODO: Access the 1st abd 4th element of grades using positional indexing
+1792045377719:# TODO: Access "Science" and "PE" together using their names
+1792045377720:grades[3]
+1792045377721:grades[c(1, 4)]
+1792045377722:grades[c("Science", "PE")]
+1792045377727:# TODO: Return all elements of grades EXCEPT the 1st and 4th, using
+1792045377727:# negative indexing, e.g. grades[-c(...)]
+1792045377728:grades[-c(1, 4)]
+1792045377733:# TODO: Use a logical condition to return only the grades that are
+1792045377734:# greater than or equal to 85 (hint: grades[grades >= 85])
+1792045377734:grades[grades >= 85]
+1792045377739:x <- c(1, 2, 3, 4)
+1792045377741:y <- c(10, 20, 30, 40)
+1792045377744:# TODO: Add x and y element-wise, and print the result
+1792045377745:# TODO: Multiply every element of x by 2
+1792045377746:x + y
+1792045377747:# [1] 11 22 33 44
+1792045377748:x * 2
+1792045377749:# [1] 2 4 6 8
+1792045377753:z <- c(1, 2, 3, 4, 5, 6)
+1792045377756:short <- c(1, 0)
+1792045377759:# TODO: Add z and short together and print the result. Run this even
+1792045377760:# though the vectors are different lengths -- observe what R does.
+1792045377761:z + short
+1792045377762:# 2 2 4 4 6 6
+1792045377766:fruits <- c("apple", "banana", "cherry")
+1792045377768:# TODO: Use append() to add "date" to the end of fruits
+1792045377789:# TODO: Use append() with the "after" argument to insert "kiwi" between
+1792045377790:# "apple" and "banana" (i.e., after position 1)
+1792045377790:append(fruits, "date")
+1792045377792:# "apple"  "banana" "cherry" "date"
+1792045377793:append(fruits, "kiwi", after = 1)
+1792045377794:# "apple"  "kiwi"   "banana" "cherry"
+1792045377798:# TODO: Create a list called student with these named elements:
+1792045377799:# name = "Maria Santos", age = 20, grades = c(88, 92, 79),
+1792045377800:# is_enrolled = TRUE
+1792045377801:student <- list(
+1792045377802:name = "Maria Santos",
+1792045377802:age = 20,
+1792045377803:grades = c(88, 92, 79),
+1792045377804:is_enrolled = TRUE
+1792045377805:)
+1792045377812:# TODO: Access the "grades" element of student using single brackets
+1792045377813:# student["grades"] -- then check its type with class()
+1792045377814:# Access using single brackets
+1792045377815:sub_list <- student["grades"]
+1792045377817:# Check its type
+1792045377818:class(sub_list)
+1792045377820:# "list"
+1792045377823:# TODO: Access the "grades" element of student using double brackets
+1792045377824:# student[["grades"]] -- then check its type with class()
+1792045377825:# Access using double brackets
+1792045377826:raw_grades <- student[["grades"]]
+1792045377829:# Check its type
+1792045377830:class(raw_grades)
+1792045377831:# "numeric"
+1792045377836:# TODO: Access the "name" element of student using the $ operator
+1792045377836:# student$name
+1792045377837:student$name
+1792045377838:# [1] "Maria Santos"
+1792045377842:# TODO: From student, extract just the SECOND grade in the grades vector
+1792045377843:# in a single expression, e.g. student[["grades"]][2] or student$grades[2]
+1792045377843:student$grades[2]
+1792045377845:# 92
+1792045377848:inventory <- list(
+1792045377849:item = c("Notebook", "Pen", "Eraser"),
+1792045377850:price = c(25.50, 10.00, 5.00),
+1792045377851:in_stock = c(TRUE, TRUE, FALSE)
+1792045377852:)
+1792045377856:# TODO: Using what you learned in Parts B and D, print only the items
+1792045377857:# (from inventory$item) that are currently in stock (in_stock == TRUE)
+1792045377857:inventory$item[inventory$in_stock]
+1792045377859:# "Notebook" "Pen"
+1792045377862:# TODO: A new product "Ruler" priced at 15.00 and in stock (TRUE) needs
+1792045377863:# to be added to inventory. Use append() to add "Ruler" to
+1792045377864:# inventory$item, 15.00 to inventory$price, and TRUE to inventory$in_stock.
+1792045377889:# (You will need three separate append() calls, one per vector.)
+1792045377919:inventory$item <- append(inventory$item, "Ruler")
+1792045377922:inventory$price <- append(inventory$price, 15.00)
+1792045377926:inventory$in_stock <- append(inventory$in_stock, TRUE)
+1792045411444:save.image("/cloud/project/RExercise#3_SEVILLENO/RExercise#3_SEVILLENO.Rmd.RData")
+1792045718394:git config --global user.name "bwensevilleno" git config --global user.email "bwen.sevilleno@students.isatu.edu.ph"

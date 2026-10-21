@@ -1,0 +1,55 @@
+]0;/cloud/project[?2004h/cloud/project$ [K/cloud/project$ 
+[?2004l]0;/cloud/project[?2004h/cloud/project$ cd ~
+[?2004l]0;~[?2004h~$ cd Documents
+[?2004lbash: cd: Documents: No such file or directory
+]0;~[?2004h~$ ls
+[?2004lR
+]0;~[?2004h~$ cd 'R'
+[?2004l]0;~/R[?2004h~/R$ ls
+[?2004lx86_64-pc-linux-gnu-library
+]0;~/R[?2004h~/R$ [K~/R$ 
+[?2004l]0;~/R[?2004h~/R$ git config --gloc[Kbal user.name"bwensevilleno"
+[?2004l]0;~/R[?2004h~/R$ git config --global user.email "bwen.sevilleno@ students.isatu.edu.ph"
+[?2004l]0;~/R[?2004h~/R$ git pull origin main
+[?2004lfatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~/R[?2004h~/R$ git push origin main
+[?2004lfatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~/R[?2004h~/R$ ^C[?2004l[?2004h[?2004l
+]0;~/R[?2004h~/R$ cd/cloud/project
+[?2004lbash: cd/cloud/project: No such file or directory
+]0;~/R[?2004h~/R$ cd
+[?2004l]0;~[?2004h~$ git status
+[?2004lfatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~[?2004h~$ git init
+[?2004l[33mhint: Using 'master' as the name for the initial branch. This default branch name[m
+[33mhint: is subject to change. To configure the initial branch name to use in all[m
+[33mhint: of your new repositories, which will suppress this warning, call:[m
+[33mhint: [m
+[33mhint: 	git config --global init.defaultBranch <name>[m
+[33mhint: [m
+[33mhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and[m
+[33mhint: 'development'. The just-created branch can be renamed via this command:[m
+[33mhint: [m
+[33mhint: 	git branch -m <name>[m
+Initialized empty Git repository in /cloud/home/r4030417/.git/
+]0;~[?2004h~$ rm -rf .git
+[?2004l]0;~[?2004h~$ cd
+[?2004l]0;~[?2004h~$ git init
+[?2004l[33mhint: Using 'master' as the name for the initial branch. This default branch name[m
+[33mhint: is subject to change. To configure the initial branch name to use in all[m
+[33mhint: of your new repositories, which will suppress this warning, call:[m
+[33mhint: [m
+[33mhint: 	git config --global init.defaultBranch <name>[m
+[33mhint: [m
+[33mhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and[m
+[33mhint: 'development'. The just-created branch can be renamed via this command:[m
+[33mhint: [m
+[33mhint: 	git branch -m <name>[m
+Initialized empty Git repository in /cloud/home/r4030417/.git/
+]0;~[?2004h~$ git branch -m main
+[?2004l]0;~[?2004h~$ git remote add origin [K~$ git remote add origin [7mhttps://github.com/bwensevilleno/CS101_Practice.git[27m[K~$ git remote add origin [7mhttps://github.com/bwensevi[27m[7ml[27m[7mleno/CS101_Practice.git[27m[A[Chttps://github.com/bwensevilleno/CS101_Practice.git
+[?2004l]0;~[?2004h~$ git add .
+[?2004l

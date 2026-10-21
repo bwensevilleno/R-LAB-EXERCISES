@@ -1,0 +1,27 @@
+2026-10-14T16:50:20.688278Z [rsession-r4030417] INFO Reading rsession configuration from '/etc/rstudio/rsession.conf' using default config dir
+2026-10-14T16:50:20.788378Z [rsession-r4030417] INFO Encryption versions set to max: 0, min: 0
+2026-10-14T16:50:21.534261Z [rsession-r4030417] INFO Set CRAN URL for session to 'https://packagemanager.posit.co/cran/__linux__/noble/latest' (source: preference defaults)
+2026-10-14T16:50:21.927232Z [rsession-r4030417] WARNING R version 4.6.1 is newer than the maximum version of R tested with this version of RStudio (4.6.0). If you experience issues, please try updating RStudio to a newer version.; LOGGED FROM: rstudio::core::Error {anonymous}::rInit(const rstudio::r::session::RInitInfo&) src/cpp/session/SessionMain.cpp:608
+2026-10-14T16:50:22.389916Z [rsession-r4030417] INFO Databricks pane requires user-provided DATABRICKS_HOST and DATABRICKS_TOKEN
+2026-10-14T16:50:22.393370Z [rsession-r4030417] INFO Detected existing system-wide Git configuration, skipping
+2026-10-14T16:50:22.861626Z [rsession-r4030417] INFO No admin notifications found at /etc/rstudio/notifications.conf
+2026-10-14T16:50:23.949441Z [rsession-r4030417] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2026-10-14T16:50:23.950453Z [rsession-r4030417] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2026-10-14T16:50:23.950853Z [rsession-r4030417] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2026-10-14T18:42:16.386675Z [rsession-r4030417] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2026-10-14T18:51:24.803927Z [rsession-r4030417] INFO Lowered CPU priority during suspend
+2026-10-15T05:54:32.993009Z [rsession-r4030417] INFO Reading rsession configuration from '/etc/rstudio/rsession.conf' using default config dir
+2026-10-15T05:54:33.091519Z [rsession-r4030417] INFO Encryption versions set to max: 0, min: 0
+2026-10-15T05:54:34.158574Z [rsession-r4030417] INFO Set CRAN URL for session to 'https://packagemanager.posit.co/cran/__linux__/noble/latest' (source: preference defaults)
+2026-10-15T05:54:36.597923Z [rsession-r4030417] WARNING R version 4.6.1 is newer than the maximum version of R tested with this version of RStudio (4.6.0). If you experience issues, please try updating RStudio to a newer version.; LOGGED FROM: rstudio::core::Error {anonymous}::rInit(const rstudio::r::session::RInitInfo&) src/cpp/session/SessionMain.cpp:608
+2026-10-15T05:54:37.216724Z [rsession-r4030417] INFO Databricks pane requires user-provided DATABRICKS_HOST and DATABRICKS_TOKEN
+2026-10-15T05:54:37.221335Z [rsession-r4030417] INFO Detected existing system-wide Git configuration, skipping
+2026-10-15T05:54:38.785088Z [rsession-r4030417] INFO No admin notifications found at /etc/rstudio/notifications.conf
+2026-10-15T05:54:40.287014Z [rsession-r4030417] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2026-10-15T05:54:40.288374Z [rsession-r4030417] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2026-10-15T05:54:40.298075Z [rsession-r4030417] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2026-10-15T05:59:51.161832Z [rsession-r4030417] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2026-10-15T06:12:23.033732Z [rsession-r4030417] ERROR system error 84 (Invalid or incomplete multibyte or wide character) [str: doesn’t, len: 9, from: UTF-8, to: ISO8859-1]; OCCURRED AT rstudio::core::Error rstudio::r::util::{anonymous}::iconvstrImpl(const string&, const string&, const string&, bool, std::string*) src/cpp/r/RUtil.cpp:272; LOGGED FROM: rstudio::core::Error rstudio::session::modules::spelling::{anonymous}::checkSpelling(const rstudio::core::json::JsonRpcRequest&, rstudio::core::json::JsonRpcResponse*) src/cpp/session/modules/SessionSpelling.cpp:225
+2026-10-15T06:13:07.104596Z [rsession-r4030417] ERROR system error 84 (Invalid or incomplete multibyte or wide character) [str: R’s, len: 5, from: UTF-8, to: ISO8859-1]; OCCURRED AT rstudio::core::Error rstudio::r::util::{anonymous}::iconvstrImpl(const string&, const string&, const string&, bool, std::string*) src/cpp/r/RUtil.cpp:272; LOGGED FROM: rstudio::core::Error rstudio::session::modules::spelling::{anonymous}::checkSpelling(const rstudio::core::json::JsonRpcRequest&, rstudio::core::json::JsonRpcResponse*) src/cpp/session/modules/SessionSpelling.cpp:225
+2026-10-15T06:15:05.365909Z [rsession-r4030417] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2026-10-15T06:17:35.798458Z [rsession-r4030417] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json

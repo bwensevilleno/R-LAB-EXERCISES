@@ -1,0 +1,146 @@
+# TODO: Create a numeric vector called scores containing: 88, 92, 79, 95, 84
+# Then create a character vector called subjects containing:
+# "Math", "Science", "English", "History", "PE"
+# Create a numeric vector called scores
+scores <- c(88, 92, 79, 95, 84)
+# Create a character vector called subjects
+subjects <- c("Math", "Science", "English", "History", "PE")
+# TODO: Use seq() to create a vector called odds containing odd numbers
+# from 1 to 19 (hint: use the "by" argument)
+# TODO: Use seq() with length.out to create a vector of exactly 5 evenly
+# spaced numbers between 0 and 1
+# TODO: Use seq() to create a vector called odds containing odd numbers
+# from 1 to 19 (hint: use the "by" argument)
+odds <- seq(from = 1, to = 19, by = 2)
+# TODO: Use seq() with length.out to create a vector of exactly 5 evenly
+# spaced numbers between 0 and 1
+evenly_spaced <- seq(from = 0, to = 1, length.out = 5)
+# TODO: Use rep() to create a vector that repeats the value "A" 4 times
+# TODO: Use rep() with the "each" argument to turn c("A", "B") into
+# "A" "A" "B" "B" (each element repeated twice, in order)
+# TODO: Use rep() with the "times" argument to turn c("A", "B") into
+# "A" "B" "A" "B" (the whole sequence repeated twice)
+rep("A", 4)
+# TODO: Use rep() to create a vector that repeats the value "A" 4 times
+# TODO: Use rep() with the "each" argument to turn c("A", "B") into
+# "A" "A" "B" "B" (each element repeated twice, in order)
+# TODO: Use rep() with the "times" argument to turn c("A", "B") into
+# "A" "B" "A" "B" (the whole sequence repeated twice)
+rep("A", 4)
+rep(c("A", "B"), each = 2)
+rep(c("A", "B"), times = 2)
+grades <- c(88, 92, 79, 95, 84)
+names(grades) <- c("Math", "Science", "English", "History", "PE")
+# TODO: Access the 3rd element of grades using positional indexing
+# TODO: Access the 1st abd 4th element of grades using positional indexing
+# TODO: Access "Science" and "PE" together using their names
+grades[3]
+grades <- c(88, 92, 79, 95, 84)
+names(grades) <- c("Math", "Science", "English", "History", "PE")
+# TODO: Access the 3rd element of grades using positional indexing
+# TODO: Access the 1st abd 4th element of grades using positional indexing
+# TODO: Access "Science" and "PE" together using their names
+grades[3]
+grades[c(1, 4)]
+grades <- c(88, 92, 79, 95, 84)
+names(grades) <- c("Math", "Science", "English", "History", "PE")
+# TODO: Access the 3rd element of grades using positional indexing
+# TODO: Access the 1st abd 4th element of grades using positional indexing
+# TODO: Access "Science" and "PE" together using their names
+grades[3]
+grades[c(1, 4)]
+grades[c("Science", "PE")]
+# TODO: Return all elements of grades EXCEPT the 1st and 4th, using
+# negative indexing, e.g. grades[-c(...)]
+grades[-c(1, 4)]
+# TODO: Use a logical condition to return only the grades that are
+# greater than or equal to 85 (hint: grades[grades >= 85])
+grades[grades >= 85]
+x <- c(1, 2, 3, 4)
+y <- c(10, 20, 30, 40)
+# TODO: Add x and y element-wise, and print the result
+# TODO: Multiply every element of x by 2
+x + y
+# [1] 11 22 33 44
+x <- c(1, 2, 3, 4)
+y <- c(10, 20, 30, 40)
+# TODO: Add x and y element-wise, and print the result
+# TODO: Multiply every element of x by 2
+x + y
+# [1] 11 22 33 44
+x * 2
+# [1] 2 4 6 8
+z <- c(1, 2, 3, 4, 5, 6)
+short <- c(1, 0)
+# TODO: Add z and short together and print the result. Run this even
+# though the vectors are different lengths -- observe what R does.
+z + short
+# 2 2 4 4 6 6
+fruits <- c("apple", "banana", "cherry")
+# TODO: Use append() to add "date" to the end of fruits
+# TODO: Use append() with the "after" argument to insert "kiwi" between
+# "apple" and "banana" (i.e., after position 1)
+append(fruits, "date")
+# "apple"  "banana" "cherry" "date"
+fruits <- c("apple", "banana", "cherry")
+# TODO: Use append() to add "date" to the end of fruits
+# TODO: Use append() with the "after" argument to insert "kiwi" between
+# "apple" and "banana" (i.e., after position 1)
+append(fruits, "date")
+# "apple"  "banana" "cherry" "date"
+append(fruits, "kiwi", after = 1)
+# "apple"  "kiwi"   "banana" "cherry"
+# TODO: Create a list called student with these named elements:
+# name = "Maria Santos", age = 20, grades = c(88, 92, 79),
+# is_enrolled = TRUE
+student <- list(
+name = "Maria Santos",
+age = 20,
+grades = c(88, 92, 79),
+is_enrolled = TRUE
+)
+# TODO: Access the "grades" element of student using single brackets
+# student["grades"] -- then check its type with class()
+# Access using single brackets
+sub_list <- student["grades"]
+# Check its type
+class(sub_list)
+# "list"
+# TODO: Access the "grades" element of student using double brackets
+# student[["grades"]] -- then check its type with class()
+# Access using double brackets
+raw_grades <- student[["grades"]]
+# Check its type
+class(raw_grades)
+# "numeric"
+# TODO: Access the "name" element of student using the $ operator
+# student$name
+student$name
+# [1] "Maria Santos"
+# TODO: From student, extract just the SECOND grade in the grades vector
+# in a single expression, e.g. student[["grades"]][2] or student$grades[2]
+student$grades[2]
+# 92
+inventory <- list(
+item = c("Notebook", "Pen", "Eraser"),
+price = c(25.50, 10.00, 5.00),
+in_stock = c(TRUE, TRUE, FALSE)
+)
+# TODO: Using what you learned in Parts B and D, print only the items
+# (from inventory$item) that are currently in stock (in_stock == TRUE)
+inventory$item[inventory$in_stock]
+# "Notebook" "Pen"
+# TODO: A new product "Ruler" priced at 15.00 and in stock (TRUE) needs
+# to be added to inventory. Use append() to add "Ruler" to
+# inventory$item, 15.00 to inventory$price, and TRUE to inventory$in_stock.
+# (You will need three separate append() calls, one per vector.)
+inventory$item <- append(inventory$item, "Ruler")
+inventory$price <- append(inventory$price, 15.00)
+inventory$in_stock <- append(inventory$in_stock, TRUE)
+# TODO: A new product "Ruler" priced at 15.00 and in stock (TRUE) needs
+# to be added to inventory. Use append() to add "Ruler" to
+# inventory$item, 15.00 to inventory$price, and TRUE to inventory$in_stock.
+# (You will need three separate append() calls, one per vector.)
+inventory$item <- append(inventory$item, "Ruler")
+inventory$price <- append(inventory$price, 15.00)
+inventory$in_stock <- append(inventory$in_stock, TRUE)

@@ -1,0 +1,7 @@
+---
+title: 'R Lab: Conditional Statements in R'
+author: "Bwen Sevilleno"
+date: "2026-11-27"
+output: html_document
+---
+

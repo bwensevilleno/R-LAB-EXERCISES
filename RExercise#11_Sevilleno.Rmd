@@ -1,4 +1,11 @@
 ---
+title: "R Lab: Conditional Statements in R"
+author: "Bwen Sevilleno"
+date: "2026-11-27"
+output: html_document
+---
+
+---
 title: 'R Lab: Conditional Statements in R'
 author: "Bwen Sevilleno"
 date: "2026-11-27"
@@ -128,8 +135,15 @@ Question #6
 
 a. Import the file safely.**
 ```{r}
-grades <- read.csv("RExercises_Sevilleno/students_grades.csv", stringsAsFactors = FALSE)
+csv_path <- if (file.exists("students_grades.csv")) {
+  "students_grades.csv"
+} else if (file.exists("RExercises_Sevilleno/students_grades.csv")) {
+  "RExercises_Sevilleno/students_grades.csv"
+} else {
+  stop("Cannot find students_grades.csv")
+}
 
+grades <- read.csv(csv_path, stringsAsFactors = FALSE)
 str(grades)
 head(grades)
 summary(grades)
@@ -137,14 +151,30 @@ summary(grades)
 
 b. Use if ... else to check that the file exists before importing it.
 ```{r}
-file_path <- "RExercises_Sevilleno/students_grades.csv"
-
-if (file.exists(file_path)) {
-  grades <- read.csv(file_path, stringsAsFactors = FALSE)
-  message("Successfully loaded: ", file_path)
+csv_path <- if (file.exists("students_grades.csv")) {
+  "students_grades.csv"
+} else if (file.exists("RExercises_Sevilleno/students_grades.csv")) {
+  "RExercises_Sevilleno/students_grades.csv"
+} else if (file.exists("../students_grades.csv")) {
+  "../students_grades.csv"
 } else {
-  stop("Error: 'students_grades.csv' was not found in the working directory.")
+  stop("Error: students_grades.csv not found.")
 }
+
+grades <- read.csv(csv_path, stringsAsFactors = FALSE)
+
+grades$AvgScore <- round(rowMeans(grades[, c("Quiz", "Midterm", "Final")], na.rm = TRUE), 1)
+has_na <- is.na(grades$Quiz) | is.na(grades$Midterm) | is.na(grades$Final)
+
+grades$Status <- ifelse(
+  has_na,
+  "Incomplete",
+  ifelse(grades$AvgScore >= 75, "Passed", "Failed")
+)
+
+cat("Dimensions:", nrow(grades), "rows x", ncol(grades), "cols\n")
+print(head(grades, 6))
+print(table(grades$Status, useNA = "ifany"))
 ```
 c. Inspect the data.
 ```{r}
@@ -198,10 +228,10 @@ e. Check the grades should have 15 rows, 7 columns, and exactly one NA.
 ```{r}
 stopifnot(
   nrow(grades) == 15,
-  ncol(grades) == 7,
+  ncol(grades) == 9,
   sum(is.na(grades)) == 1
 )
-cat("All checks passed: 15 rows, 7 columns, and 1 NA.\n")
+cat("All checks passed: 15 rows, 9 columns, and 1 NA.\n")
 ```
 
 f.Applying Conditional Statements
@@ -310,10 +340,12 @@ Question #7
 
 a.Export the full processed table.** The argument row.names = FALSE stops R from adding an extra numbering column.
 ```{r}
-file.exists("students_grades_processed.csv")
-exported <- read.csv("students_grades_processed.csv")
+write.csv(grades, "students_grades_processed.csv", row.names = FALSE)
+
+print(file.exists("students_grades_processed.csv"))
+exported <- read.csv("students_grades_processed.csv", stringsAsFactors = FALSE)
 dim(exported)
-head(exported)
+head(exported, 6)
 ```
 
 b.Export the at-risk students.** The file is written only when there is at least one at-risk student.
@@ -322,6 +354,7 @@ at_risk <- grades[!is.na(grades$AttendanceFlag) & grades$AttendanceFlag == "At R
 
 if (nrow(at_risk) > 0) {
   write.csv(at_risk, "at_risk_students.csv", row.names = FALSE)
+  print(at_risk)
 } else {
   print("No at-risk students found.")
 }
@@ -332,8 +365,21 @@ c.Export the honors list.
 2.Keep only these columns: StudentID, Name, Section, FinalGrade, Attendance. Hint: grades[rows_condition, c("StudentID", "Name")].
 3.Use an if ... else statement to export it as honors_list.csv, or print a message if the list is empty.
 ```{r}
-file.exists("honors_list.csv")
-read.csv("honors_list.csv")
+cols <- c("StudentID", "Name", "Section", "FinalGrade", "Attendance")
+rows_condition <- !is.na(grades$Honors) & grades$Honors == "Yes"
+honors_df <- grades[rows_condition, cols]
+
+if (nrow(honors_df) > 0) {
+  write.csv(honors_df, "honors_list.csv", row.names = FALSE)
+} else {
+  print("Honors list is empty; honors_list.csv was not written.")
+}
+
+print(file.exists("honors_list.csv"))
+if (file.exists("honors_list.csv")) {
+  honors_imported <- read.csv("honors_list.csv", stringsAsFactors = FALSE)
+  print(honors_imported)
+}
 ```
 
 d.Verify your exports. Never assume a file was written correctly. Read it back and compare.
@@ -407,7 +453,23 @@ scholarship_qualified[, c("StudentID", "Name", "Section", "FinalGrade", "Attenda
 
 d.Export them to scholarship_candidates.csv with row.names = FALSE, using an if ... else guard.
 ```{r}
-read.csv("RExercises_Sevilleno/scholarship_candidates.csv")
+if (!exists("scholarship_candidates")) {
+  cond <- !is.na(grades$FinalGrade) & !is.na(grades$Attendance) &
+    grades$FinalGrade >= 85 & grades$Attendance >= 85
+  scholarship_candidates <- grades[cond, c("StudentID", "Name", "Section", "FinalGrade", "Attendance", "Honors")]
+}
+
+if (nrow(scholarship_candidates) > 0) {
+  write.csv(scholarship_candidates, "scholarship_candidates.csv", row.names = FALSE)
+  cat("Exported", nrow(scholarship_candidates), "rows to scholarship_candidates.csv\n")
+} else {
+  print("No scholarship candidates found; scholarship_candidates.csv was not written.")
+}
+
+if (file.exists("scholarship_candidates.csv")) {
+  exported_candidates <- read.csv("scholarship_candidates.csv", stringsAsFactors = FALSE)
+  print(exported_candidates)
+}
 ```
 
 e.Print a count of each category with table().
